@@ -1,13 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
-import App from "../App.vue";
+// import App from "../App.vue";
+import AllModules from "../views/AllModules.vue";
+import ChallengeView from "../views/Challenge.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "app",
-      component: App,
+      name: "home",
+      component: AllModules,
+      meta: {
+        showNavBar: true,
+      },
+    },
+    {
+      path: "/challenge/:class/:id",
+      name: "challenge",
+      component: ChallengeView,
+      meta: {
+        showNavBar: false,
+      },
     },
     // {
     //   path: '/about',

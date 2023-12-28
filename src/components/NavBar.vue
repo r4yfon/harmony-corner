@@ -47,11 +47,11 @@ userStore.selectedSchool = userStore.enrolledSchools[0];
               {{ userStore.name }}
               <icon-solar-user-circle-linear width="24" height="24" />
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">View account</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
+            <ul class="dropdown-menu p-2">
+              <li><a class="dropdown-item rounded" href="#">View account</a></li>
+              <li><a class="dropdown-item rounded" href="#">Settings</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+              <li><a class="dropdown-item text-danger rounded" href="#">Log out</a></li>
             </ul>
           </div>
         </div>

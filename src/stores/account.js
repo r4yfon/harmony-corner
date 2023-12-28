@@ -8,5 +8,15 @@ export const useAccountStore = defineStore("id", {
     role: "student",
     enrolledSchools: ["模范班", "青少年班", "朗诵组", "插花组", "书法组", "招待组", "廖内青少年班"],
     selectedSchool: "",
+    selectedClassId: "",
+    selectedClassTitle: "",
+    latestQuestion: 0,
   }),
+  actions: {
+    selectClass(id, title) {
+      console.log(id, title);
+      this.selectedClassId = id;
+      this.selectedClassTitle = title;
+    },
+  },
 });

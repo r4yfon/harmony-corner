@@ -1,5 +1,14 @@
+<script setup>
+import { useAccountStore } from "../stores/account";
+const userStore = useAccountStore();
+</script>
+
 <template>
-  <RouterLink :to="'challenge/' + school + '/' + id" class="px-2 text-decoration-none">
+  <RouterLink
+    :to="'challenge/' + school + '/' + title"
+    class="px-2 text-decoration-none"
+    @click="userStore.selectClass(id, title)"
+  >
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">{{ title }}</h5>
@@ -36,3 +45,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card {
+  transition: scale 150ms;
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+</style>
